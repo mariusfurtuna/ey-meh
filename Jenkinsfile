@@ -18,7 +18,7 @@ export GOROOT=$GO_DIR/go
 # Check & install Golang
 #################################################
 
-if [ -x "$GO_DIR"/bin/go ] ; then
+if [ -x "$GO_DIR"/go ] ; then
     echo "Go $GO_VERSION already installed"
 else
     # wget the binary archive
