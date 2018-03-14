@@ -24,10 +24,7 @@ else
 
     # untar in $GO_DIR
     tar -C "$GO_DIR" -xzf  $GO_TARGZ
-fi
-
-export GOPATH=${HOME}/gopath  # typical value change at will
-export PATH=${GOPATH}/bin:${PATH}'''
+fi'''
       }
     }
     stage('Checkout') {
