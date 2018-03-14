@@ -35,6 +35,7 @@ fi'''
           userRemoteConfigs: [[credentialsId: 'eyautomation', url: 'https://github.com/trilogy-group/ey-meh.git', permissions: 'READABLE']]])
         }
         
+        sh 'go get github.com/engineyard/meh/cmd'
       }
     }
     stage('Test') {
