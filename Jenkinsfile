@@ -45,7 +45,7 @@ export PATH=${GOPATH}/bin:${PATH}'''
     }
     stage('Test') {
       steps {
-        sh 'go version'
+        sh 'go test'
       }
     }
   }
