@@ -68,7 +68,7 @@ fi'''
     }
     stage('Test') {
       steps {
-        sh 'go test'
+        sh 'go version'
       }
     }
   }
