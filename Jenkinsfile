@@ -39,7 +39,13 @@ fi'''
     }
     stage('Test') {
       steps {
-        sh 'go get github.com/engineyard/meh/cmd'
+        sh '''GO_VERSION=1.6
+GO_DIR=/usr/local
+
+export PATH=$GO_DIR/bin:$PATH
+export GOROOT=$GO_DIR/go
+
+go get github.com/engineyard/meh/cmd'''
         sh 'go test'
       }
     }
