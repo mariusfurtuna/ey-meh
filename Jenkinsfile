@@ -45,9 +45,7 @@ export PATH=${GOPATH}/bin:${PATH}'''
     }
     stage('Test') {
       steps {
-        sh '''export GOROOT=/usr/local/bin/go
-
-go version'''
+        sh 'go version'
       }
     }
   }
