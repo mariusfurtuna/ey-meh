@@ -39,8 +39,10 @@ fi'''
     }
     stage('Test') {
       steps {
-        sh '''export GOPATH=~/go
-export PATH=$PATH:$GOPATH/bin
+        sh '''export GOPATH=$HOME/gopath
+export PATH=$HOME/gopath/bin:$PATH
+mkdir -p $HOME/gopath/src/github.com/engineyard/meh
+cd $HOME/gopath/src/github.com/engineyard/meh
 
 go get github.com/engineyard/meh/cmd'''
         sh 'go test'
