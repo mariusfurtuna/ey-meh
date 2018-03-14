@@ -44,7 +44,9 @@ fi'''
     }
     stage('Test') {
       steps {
-        sh 'echo $GOPATH'
+        sh '''export GOROOT=/usr/local/bin/go
+
+go version'''
       }
     }
   }
