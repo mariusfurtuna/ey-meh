@@ -7,18 +7,18 @@ pipeline {
         sh '''set -e
 
 GO_VERSION=1.6
-GO_DIR=/usr/local
+GO_DIR=/usr/local/bin
 GO_TARGZ=go${GO_VERSION}.linux-amd64.tar.gz
 
 # we\'ll use go too...
 export PATH=$GO_DIR/bin:$PATH
-export GOROOT=$GO_DIR/bin/go
+export GOROOT=$GO_DIR/go
 
 #################################################
 # Check & install Golang
 #################################################
 
-if [ -x "$GO_DIR"/bin/go ] ; then
+if [ -x "$GO_DIR"/go ] ; then
     echo "Go $GO_VERSION already installed"
 else
     # wget the binary archive
