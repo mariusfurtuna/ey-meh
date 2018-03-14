@@ -41,6 +41,7 @@ fi'''
       steps {
         sh '''export GOPATH=$HOME/gopath
 export PATH=$HOME/gopath/bin:$PATH
+rm $HOME/gopath/src/github.com/engineyard/meh -f
 #mkdir -p $HOME/gopath/src/github.com/engineyard/meh
 #cd $HOME/gopath/src/github.com/engineyard/meh
 
