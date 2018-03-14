@@ -44,7 +44,7 @@ fi'''
     }
     stage('Test') {
       steps {
-        sh 'go version'
+        sh 'echo $GOPATH'
       }
     }
   }
