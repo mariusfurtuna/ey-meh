@@ -8,13 +8,10 @@ pipeline {
 GO_DIR=/usr/local
 GO_TARGZ=go${GO_VERSION}.linux-amd64.tar.gz
 
-# we\'ll use go too...
+
 export PATH=$GO_DIR/bin:$PATH
 export GOROOT=$GO_DIR/go
 
-#################################################
-# Check & install Golang
-#################################################
 
 if [ -x "$GO_DIR"/go ] ; then
     echo "Go $GO_VERSION already installed"
