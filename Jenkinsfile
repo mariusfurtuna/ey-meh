@@ -4,10 +4,8 @@ pipeline {
     stage('Environment') {
       steps {
         echo 'Installing Go v1.6 ...'
-        sh '''set -e
-
-GO_VERSION=1.6
-GO_DIR=/usr/local/bin
+        sh '''GO_VERSION=1.6
+GO_DIR=/usr/local
 GO_TARGZ=go${GO_VERSION}.linux-amd64.tar.gz
 
 # we\'ll use go too...
@@ -18,15 +16,18 @@ export GOROOT=$GO_DIR/go
 # Check & install Golang
 #################################################
 
-if [ -x "$GO_DIR"/go ] ; then
+if [ -x "$GO_DIR"/bin/go ] ; then
     echo "Go $GO_VERSION already installed"
 else
     # wget the binary archive
-    wget https://storage.googleapis.com/golang/$GO_TARGZ
+    wget https://dl.google.com/go/$GO_TARGZ
 
     # untar in $GO_DIR
-    tar -xvz -C "$GO_DIR" --strip-components=1 -f "$GO_TARGZ"
-fi'''
+    tar -C "$GO_DIR" -xzf  $GO_TARGZ
+fi
+
+export GOPATH=${HOME}/gopath  # typical value change at will
+export PATH=${GOPATH}/bin:${PATH}'''
       }
     }
     stage('Checkout') {
