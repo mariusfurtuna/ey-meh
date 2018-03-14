@@ -5,7 +5,7 @@ pipeline {
       steps {
         echo 'Installing Go v1.6 ...'
         sh '''GO_VERSION=1.6
-GO_DIR=${env.WORKSPACE}/../${env.JOB_NAME}@script
+GO_DIR=/usr/local
 GO_TARGZ=go${GO_VERSION}.linux-amd64.tar.gz
 
 # we\'ll use go too...
