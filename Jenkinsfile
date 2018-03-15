@@ -40,9 +40,9 @@ fi'''
     }
     stage('Configuration') {
       steps {
-        sh '''mkdir -p /usr/local/src/github.com/engineyard/meh/
-cp -R $PWD/. /usr/local/src/github.com/engineyard/meh/
-cp -R $PWD/vendor/github.com/. /usr/local/src/github.com/
+        sh '''mkdir -p /usr/local/go/src/github.com/engineyard/meh/
+cp -R $PWD/. /usr/local/go/src/github.com/engineyard/meh/
+#cp -R $PWD/vendor/github.com/. /usr/local/go/src/github.com/
 '''
       }
     }
