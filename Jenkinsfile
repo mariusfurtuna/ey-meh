@@ -42,7 +42,7 @@ fi'''
       steps {
         sh '''mkdir -p /usr/local/src/github.com/engineyard/meh/
 cp -R $PWD/. /usr/local/src/github.com/engineyard/meh/
-#cp -R $PWD/vendor/. /usr/local/src/
+cp -R $PWD/vendor/github.com/. /usr/local/src/github.com/
 '''
       }
     }
