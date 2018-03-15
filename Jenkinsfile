@@ -42,6 +42,7 @@ fi'''
       steps {
         sh '''export GOPATH=/usr/local
 
+go get github.com/engineyard/meh/cmd
 go get github.com/DATA-DOG/godog/cmd/godog
 go get github.com/ess/kennel
 go get github.com/ess/keylargo
