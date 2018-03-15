@@ -40,9 +40,11 @@ fi'''
     }
     stage('Configuration') {
       steps {
-        sh '''mkdir -p /usr/local/go/src/github.com/engineyard/meh/
-cp -R $PWD/. /usr/local/go/src/github.com/engineyard/meh/
-#cp -R $PWD/vendor/github.com/. /usr/local/go/src/github.com/
+        sh '''GO_DIR=/usr/local/go/src
+
+mkdir -p $GO_DIR/github.com/engineyard/meh/
+cp -R $PWD/. $GO_DIR/github.com/engineyard/meh/
+cp -R $PWD/vendor/github.com/. $GO_DIR/github.com/
 '''
       }
     }
