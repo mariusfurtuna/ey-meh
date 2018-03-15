@@ -51,7 +51,7 @@ mkdir -p $GO_DIR_EY_DEP/engineyard/meh/
 cp -R $PWD/. $GO_DIR_EY_DEP/engineyard/meh/
 rm -rf $GO_DIR_EY_DEP/engineyard/meh/vendor/github.com
 cp -R $PWD/vendor $GO_DIR/
-rm -rf $PWD/vendor/github.com
+rm -rf $GO_DIR/vendor/github.com
 cp -R $PWD/vendor/github.com $GO_DIR/
 
 '''
