@@ -42,11 +42,12 @@ fi'''
       steps {
         sh '''export GOPATH=$HOME/gopath
 export PATH=$HOME/gopath/bin:$PATH
-rm $HOME/gopath/src/github.com/engineyard/meh -rf
+#rm $HOME/gopath/src/github.com/engineyard/meh -rf
 #mkdir -p $HOME/gopath/src/github.com/engineyard/meh
 #cd $HOME/gopath/src/github.com/engineyard/meh
 
-go get github.com/engineyard/meh/cmd'''
+#go get github.com/engineyard/meh/cmd
+go test'''
         sh 'go test'
       }
     }
