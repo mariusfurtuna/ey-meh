@@ -41,6 +41,11 @@ fi'''
     stage('Configuration') {
       steps {
         sh '''GO_DIR=/usr/local/go/src
+GO_DIR_EY_DEP = $GO_DIR/github.com
+
+if [ -d "$GO_DIR_EY_DEP" ]; then
+  rm -rf $GO_DIR_EY_DEP
+fi
 
 mkdir -p $GO_DIR/github.com/engineyard/meh/
 cp -R $PWD/. $GO_DIR/github.com/engineyard/meh/
