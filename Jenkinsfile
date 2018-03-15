@@ -46,7 +46,7 @@ export PATH=$HOME/gopath/bin:$PATH
 #mkdir -p $HOME/gopath/src/github.com/engineyard/meh
 #cd $HOME/gopath/src/github.com/engineyard/meh
 
-#go get -u github.com/engineyard/meh/cmd
+go get -u github.com/engineyard/meh/cmd
 go test'''
         sh 'go test'
       }
