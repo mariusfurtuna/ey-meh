@@ -29,7 +29,7 @@ fi'''
       steps {
         script {
           checkout([$class: 'GitSCM',
-          branches: [[name: "*/master"]],
+          branches: [[name: "feature/show-test"]],
           doGenerateSubmoduleConfigurations: false,
           extensions: [[$class: 'CloneOption', noTags: true, shallow: true]],
           submoduleCfg: [],
