@@ -38,7 +38,7 @@ fi'''
         
       }
     }
-    stage('Test') {
+    stage('Configuration') {
       steps {
         sh '''mkdir -p /usr/local/src/github.com/engineyard/meh/
 cp -R $PWD/. /usr/local/src/github.com/engineyard/meh/
@@ -48,8 +48,12 @@ export GOPATH=/usr/local
 go get github.com/DATA-DOG/godog/cmd/godog
 go get github.com/ess/kennel
 go get github.com/ess/keylargo
-
-go test'''
+'''
+      }
+    }
+    stage('Test') {
+      steps {
+        sh 'go test'
       }
     }
   }
