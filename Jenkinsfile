@@ -50,7 +50,7 @@ fi
 mkdir -p $GO_DIR_EY_DEP/engineyard/meh/
 cp -R $PWD/. $GO_DIR_EY_DEP/engineyard/meh/
 #rm -rf $GO_DIR_EY_DEP/engineyard/meh/vendor
-#cp -R $PWD/vendor/github.com/. $GO_DIR_EY_DEP/
+cp -R $PWD/vendor/github.com/. $GO_DIR_EY_DEP/
 '''
       }
     }
