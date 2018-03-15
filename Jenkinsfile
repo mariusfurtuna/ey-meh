@@ -48,7 +48,7 @@ cp -R $PWD/vendor/github.com/. /usr/local/src/github.com/
     }
     stage('Test') {
       steps {
-        sh '''export GOPATH=/usr/local
+        sh '''export GOPATH=$PWD/vendor
 go test'''
       }
     }
