@@ -50,7 +50,7 @@ cp -R $PWD/vendor/github.com/. $GO_DIR/github.com/
     }
     stage('Test') {
       steps {
-        sh '''export GOPATH=$PWD/vendor
+        sh '''
 go test'''
       }
     }
