@@ -53,7 +53,7 @@ cp -R $PWD/. /usr/local/src/github.com/engineyard/meh/
     }
     stage('Test') {
       steps {
-        sh '''export GOPATH=/usr/local
+        sh '''export GOPATH=/usr/local/src/github.com/engineyard/meh/vendor/
 go test'''
       }
     }
