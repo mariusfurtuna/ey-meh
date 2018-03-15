@@ -53,7 +53,7 @@ fi'''
     }
     stage('Test') {
       steps {
-        sh '''export GOPATH=$PWD/vendor
+        sh '''export GOPATH=/usr/local
 go test'''
       }
     }
