@@ -33,7 +33,7 @@ fi'''
           doGenerateSubmoduleConfigurations: false,
           extensions: [[$class: 'CloneOption', noTags: true, shallow: true]],
           submoduleCfg: [],
-          userRemoteConfigs: [[credentialsId: 'eyautomation', url: 'https://github.com/trilogy-group/ey-meh.git', permissions: 'READABLE']]])
+          userRemoteConfigs: [[credentialsId: 'eyautomation', url: 'https://github.com/trilogy-group/ey-meh.git', permissions: 'READABLE',destinationDir: '$HOME/gopath/src/github.com/engineyard/meh']]])
         }
         
       }
