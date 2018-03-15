@@ -44,6 +44,7 @@ fi'''
 export PATH=$HOME/gopath/bin:$PATH
 
 go get github.com/DATA-DOG/godog/cmd/godog
+go get github.com/ess/kennel
 
 go test'''
       }
