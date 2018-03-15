@@ -40,7 +40,7 @@ fi'''
     }
     stage('Test') {
       steps {
-        sh '''mkdir -p /usr/local/src/github.com/engineyard/meh/cmd
+        sh '''mkdir -p /usr/local/src/github.com/engineyard/meh/
 cp -R $PWD/cmd /usr/local/src/github.com/engineyard/meh/cmd
 
 export GOPATH=/usr/local
