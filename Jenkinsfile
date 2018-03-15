@@ -4,8 +4,9 @@ pipeline {
     stage('Environment') {
       steps {
         echo 'Installing Go v1.6 ...'
-        sh '''GO_VERSION=1.6
-GO_DIR=/usr/local
+        sh '''
+GO_VERSION=1.6
+GO_DIR=$HOME/gopath
 GO_TARGZ=go${GO_VERSION}.linux-amd64.tar.gz
 
 
