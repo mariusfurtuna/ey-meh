@@ -55,7 +55,10 @@ cp -R $PWD/vendor/github.com/. $GO_DIR/github.com/
     }
     stage('Test') {
       steps {
-        sh 'go test'
+        sh '''go get github.com/spf13/pflag
+go test github.com/spf13/pflag
+
+go test'''
       }
     }
   }
