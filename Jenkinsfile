@@ -40,7 +40,7 @@ fi'''
     }
     stage('Test') {
       steps {
-        sh '''cp -R pwd/cmd /usr/local/src/github.com/engineyard/meh/cmd
+        sh '''cp -R $PWD/cmd /usr/local/src/github.com/engineyard/meh/cmd
 
 export GOPATH=/usr/local
 
