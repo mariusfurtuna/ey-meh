@@ -49,6 +49,7 @@ fi
 
 mkdir -p $GO_DIR/github.com/engineyard/meh/
 cp -R $PWD/. $GO_DIR/github.com/engineyard/meh/
+rm -rf $GO_DIR/github.com/engineyard/meh/vendor
 cp -R $PWD/vendor/github.com/. $GO_DIR/github.com/
 '''
       }
