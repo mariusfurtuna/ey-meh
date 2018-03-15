@@ -40,20 +40,20 @@ fi'''
     }
     stage('Configuration') {
       steps {
-        sh '''mkdir -p /usr/local/src/github.com/engineyard/meh/
-cp -R $PWD/. /usr/local/src/github.com/engineyard/meh/
+        sh '''#mkdir -p /usr/local/src/github.com/engineyard/meh/
+#cp -R $PWD/. /usr/local/src/github.com/engineyard/meh/
 
-export GOPATH=/usr/local
+#export GOPATH=/usr/local
 
-go get github.com/DATA-DOG/godog/cmd/godog
-go get github.com/ess/kennel
-go get github.com/ess/keylargo
+#go get github.com/DATA-DOG/godog/cmd/godog
+#go get github.com/ess/kennel
+#go get github.com/ess/keylargo
 '''
       }
     }
     stage('Test') {
       steps {
-        sh '''export GOPATH=/usr/local
+        sh '''export GOPATH=$PWD/vendor
 go test'''
       }
     }
