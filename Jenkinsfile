@@ -40,13 +40,13 @@ fi'''
     }
     stage('Test') {
       steps {
-        sh '''export GOPATH=/var/lib/jenkins/workspace/ey-meh-go-test_master-XKA7OYHVDKSD4DOJ5WHCICP5TIOP46QDXZ57J7ASOQDZPEAYAEKA
+        sh '''export GOPATH=$HOME/gopath
 export PATH=$HOME/gopath/bin:$PATH
 #rm $HOME/gopath/src/github.com/engineyard/meh -rf
 #mkdir -p $HOME/gopath/src/github.com/engineyard/meh
 #cd $HOME/gopath/src/github.com/engineyard/meh
 
-#go get github.com/engineyard/meh/cmd
+go get -u github.com/engineyard/meh/cmd
 go test'''
         sh 'go test'
       }
