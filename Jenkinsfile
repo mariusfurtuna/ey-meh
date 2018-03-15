@@ -47,10 +47,10 @@ if [ -d "$GO_DIR_EY_DEP" ]; then
   rm -rf $GO_DIR_EY_DEP
 fi
 
-mkdir -p $GO_DIR/github.com/engineyard/meh/
-cp -R $PWD/. $GO_DIR/github.com/engineyard/meh/
-rm -rf $GO_DIR/github.com/engineyard/meh/vendor
-cp -R $PWD/vendor/github.com/. $GO_DIR/github.com/
+mkdir -p $GGO_DIR_EY_DEP/engineyard/meh/
+cp -R $PWD/. $GO_DIR_EY_DEP/engineyard/meh/
+#rm -rf $GO_DIR_EY_DEP/engineyard/meh/vendor
+#cp -R $PWD/vendor/github.com/. $GO_DIR_EY_DEP/
 '''
       }
     }
