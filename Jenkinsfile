@@ -56,7 +56,7 @@ cp -R $PWD/vendor/github.com/. $GO_DIR/github.com/
     stage('Test') {
       steps {
         sh '''
-go test'''
+sudo go test'''
       }
     }
   }
