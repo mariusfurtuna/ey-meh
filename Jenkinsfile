@@ -45,8 +45,8 @@ export PATH=$HOME/gopath/bin:$PATH
 #rm $HOME/gopath/src/github.com/engineyard/meh -rf
 #mkdir -p $HOME/gopath/src/github.com/engineyard/meh
 #cd $HOME/gopath/src/github.com/engineyard/meh
-
-go test'''
+go get github.com/DATA-DOG/godog/cmd/godog
+'''
         sh 'go test'
       }
     }
