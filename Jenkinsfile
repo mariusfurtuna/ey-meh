@@ -6,7 +6,7 @@ pipeline {
         echo 'Installing Go v1.6 ...'
         sh '''
 GO_VERSION=1.6
-GO_DIR=/usr/local
+GO_DIR=$HOME
 GO_TARGZ=go${GO_VERSION}.linux-amd64.tar.gz
 
 
@@ -40,7 +40,7 @@ fi'''
     }
     stage('Configuration') {
       steps {
-        sh '''GO_DIR=/usr/local/go/src
+        sh '''GO_DIR=$HOME/go/src
 GO_DIR_EY_DEP=$GO_DIR/github.com
 
 if [ -d "$GO_DIR_EY_DEP" ]; then
